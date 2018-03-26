@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171226101503) do
+ActiveRecord::Schema.define(version: 20180325171833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 20171226101503) do
     t.jsonb "settings", default: {}, null: false
     t.string "twilio_account_sid"
     t.string "somleng_account_sid"
-    t.string "twilio_auth_token"
-    t.string "somleng_auth_token"
     t.integer "permissions", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -194,6 +192,7 @@ ActiveRecord::Schema.define(version: 20171226101503) do
     t.integer "invitation_limit"
     t.bigint "invited_by_id"
     t.integer "invitations_count", default: 0
+    t.integer "roles", default: 1, null: false
     t.index ["account_id"], name: "index_users_on_account_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true

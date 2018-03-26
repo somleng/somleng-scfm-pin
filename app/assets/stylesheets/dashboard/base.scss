@@ -74,6 +74,15 @@ main {
   }
 }
 
+.form-group.check_boxes {
+  .checkbox {
+    margin-right: 12px;
+  }
+  input.check_boxes {
+    margin-right: 8px;
+  }
+}
+
 @media (min-width: 768px) {
   #left-sidebar.collapse {
     display: block;
