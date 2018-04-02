@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   root to: redirect('dashboard')
 
   namespace 'dashboard' do
-    root to: 'contacts#index'
+    root to: 'base#index'
     resources :users, only: [:index, :show, :edit, :update, :destroy]
     resources :access_tokens, only: :index
     resources :contacts
